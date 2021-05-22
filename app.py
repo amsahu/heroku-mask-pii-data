@@ -37,6 +37,7 @@ def mask_data_download():
     try:
         
         if request.method=='POST':
+            global df
             indices = get_indices(df, model)
             df_masked = mask_data(df, indices, masking_rule)
             df_masked.to_csv(os.path.join('download','masked_data.csv'), index=False)
