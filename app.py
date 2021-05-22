@@ -7,7 +7,6 @@ from custom_functions import *
 
 
 app = Flask(__name__)
-global df
 model = load('model_spacy')
 
 @app.route('/')
@@ -37,8 +36,7 @@ def mask_data_download():
     try:
         
         if request.method=='POST':
-            global df
-            indices = get_indices(df, model)
+            indices = get_indices(df=df, model=model)
             df_masked = mask_data(df, indices, masking_rule)
             df_masked.to_csv(os.path.join('download','masked_data.csv'), index=False)
             return send_file(os.path.join('download','masked_data.csv'))
