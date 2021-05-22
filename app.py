@@ -40,7 +40,7 @@ def mask_data_download():
             indices = get_indices(df, model)
             df_masked = mask_data(df, indices, masking_rule)
             df_masked.to_csv(os.path.join('download','masked_data.csv'), index=False)
-            return send_file('download\\masked_data.csv')
+            return send_file(os.path.join('download','masked_data.csv'))
     finally:
         for file in list(os.scandir('upload')):
             if file.name!='info.txt':
