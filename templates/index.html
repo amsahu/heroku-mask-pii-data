@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>PII Data masking API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+<div>
+	<h2>Mask PII data</h2>
+	<p>It takes tabular data and masks PII data column wise. 
+	It can detect PHONE, EMAIL and US ADDRESS. It may falsely mask some of your data but it most probably
+	will not miss any of the mentioned critical entity and which is the main target.</p>
+	<hr>
+	<h40><b>Steps to follow:</b></h40>
+	<ol>
+      <li>Choose file (csv or xlsx). <b>Your file must contain header, otherwise it will miss the first row to mask</b></li>
+      <li>Click "Submit" to check info</li>
+      <li>Click "Mask and download" and wait for your file to download</li>
+    </ol>
+</div>
+<div>
+    <form action="/uploader" method="post" enctype="multipart/form-data">
+		<h4>Choose file...</h4>
+		<input type="file" name="file" id="fileUpload" accept=".csv, .xlsx" required="required">
+		<br><br><button type="submit" >Submit</button>
+		
+	</form>
+   <br>
+   {{ msg_text }}<br>
+   {{ total_text }}<br>
+   {{ time_text }}
+   <br><br>
+   
+</div>
+
+<div>
+    <form action="/mask_data_download" method="post" >
+		<button id="sub" type="submit ">Mask and download</button>
+	</form>
+   <br><br>
+   
+</div>
+
+<div>
+    
+    <footer>
+    <p><em>**It does not store or use the uploaded file data as it removes the unmasked data after your file is downloaded</p>
+    <p>**Only for demo and internal to CAPGEMINI</p>
+    <p>Developer: Anshuman Sahu (<a href="mailto:anshuman.a.sahu@capgemini.com">anshuman.a.sahu@capgemini.com</a>)</em></p>
+    </footer>
+</div>
+
+</body>
+</html>
