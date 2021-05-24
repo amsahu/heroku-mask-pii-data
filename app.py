@@ -15,6 +15,7 @@ def home():
     for file in (list(os.scandir('upload')) + list(os.scandir('download'))):
             if file.name!='info.txt':
                 os.remove(file.path)
+    global df
     return render_template('index.html')
 
 @app.route("/uploader" , methods=['GET', 'POST'])
@@ -26,7 +27,6 @@ def uploader():
         f = request.files['file']
         f.save(os.path.join(os.getcwd(), 'upload', secure_filename(f.filename)))
         filename = os.path.join('upload',secure_filename(f.filename))
-        global df
         if filename.endswith('.csv'):
             df= create_df(filename, 1)
         else:
