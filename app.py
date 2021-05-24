@@ -28,7 +28,7 @@ def uploader():
         return render_template('index.html', 
                                msg_text='Uploaded successfully',
                                total_text='Total data (row*column): {}'.format(df.shape[0]*df.shape[1]),
-                               time_text= 'After clicking "Mask and download", it will take less than {} seconds, do not close the browser'.format(int((0.006*df.shape[0]*df.shape[1])+10)))
+                               time_text= 'After clicking "Mask and download", it will take less than {} seconds, do not close the browser'.format(int((0.006*df.shape[0]*df.shape[1])+15)))
 
 
 @app.route("/mask_data_download" , methods=['GET', 'POST'])
