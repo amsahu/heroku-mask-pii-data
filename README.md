@@ -1,13 +1,9 @@
 # Heroku-mask-pii-data
 
-**App link:** https://mask-pii-data.herokuapp.com/
+**App link:** https://pii-entity-detection.herokuapp.com/
 
-Follow the description given in the website to get the results.
-Since it is deployed as demo, it has some limitations to take care of.
-
-**Alternate App:** https://pii-entity-detection.herokuapp.com/
-
-Above website is another application which contains the same AI model, but it performs only data discovery. This app can detect the entity type. It can detect any of EMAIL, US PHONE, ADDRESS or NONE.
+Follow the description given in the website to get the results. Since it is deployed as demo, it has some limitations.
+It performs only data discovery. This app can detect the entity type. It can detect any of EMAIL, US PHONE, ADDRESS or NONE.
 
 ### Abstract
 
@@ -39,5 +35,5 @@ Above website is another application which contains the same AI model, but it pe
 * All the components are in Python and created in modular approach.
 * Created from open source components, so will reduce the implementation cost for customer and will attract more customers.
 * Deployed the demo in heroku.
-* App Link: https://mask-pii-data.herokuapp.com/
-* Alternate App: https://pii-entity-detection.herokuapp.com/
+* App Link: https://pii-entity-detection.herokuapp.com/
+
