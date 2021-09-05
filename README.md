@@ -2,6 +2,8 @@
 
 **App link:** https://mask-pii-data.herokuapp.com/
 
+Follow the description given in the website to get the results.
+Since it is deployed as demo, it has some limitations to take care of.
 
 ### Abstract
 
@@ -28,7 +30,7 @@
 
 ### Achievements
 
-* Created a working standalone tool using Python to completely automate the data discovery and masking process with intelligence.
+* Created a working Flask app using Python to completely automate the data discovery and masking process with intelligence.
 * Achieved an NER model using spacy with very low error rate.
 * All the components are in Python and created in modular approach.
 * Created from open source components, so will reduce the implementation cost for customer and will attract more customers.
